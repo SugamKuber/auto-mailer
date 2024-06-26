@@ -40,6 +40,15 @@ npm run preview (to run with vite build)
 - [IMP] Input your gmail for test account
 - [IMP] Input you domains/urls for redirection
 
+## Improvements
+- Implementation expiry for tokens on redis caching 
+- Better monitoring for email job
+- Implementation of bullMQ queues if needed for generation of openAPI mail replies
+- Proper Frontend setup 
+
+### Reminder
+This app is only focused on backend
+
 ## Database setup
 - Use mongo cloud or any mongo database url
 - Remember to input the right username/password with network & access permissions
