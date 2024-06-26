@@ -23,9 +23,7 @@ class Login {
       return res.json({ msg: error });
     } finally {
       const { code } = req.query;
-      console.log(code, 'code');
       const email: string = await createToken(code as string);
-      console.log(email, "wawaawddwaaaadddddd");
       if (email != null) {
         res.redirect(`${process.env.FONTEND_REDIRECT}/check?id=${email}`);
       } else {
@@ -53,8 +51,8 @@ class Login {
         res.send(`There seems to be a problem for ${email} try logging in again`);
       }
 
-    } catch (e) {
-      console.log(e);
+    } catch (error) {
+      console.log(error);
       res.send(`There seems to be a problem for ${email} try logging in again`);
     }
 

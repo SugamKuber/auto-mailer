@@ -11,7 +11,6 @@ export const createToken = async (code: string) => {
     );
 
     const { tokens } = await oauth2Client.getToken({ code: code.toString() });
-    console.log(tokens, "dwawd");
     oauth2Client.setCredentials(tokens);
     const userInfo = google.oauth2({
       auth: oauth2Client,
@@ -20,9 +19,7 @@ export const createToken = async (code: string) => {
     const userData = await userInfo.userinfo.get();
 
     const email = userData.data.email;
-    console.log(email);
     const user = await User.findOne({ email: email });
-    console.log(user);
     let token = await Token.findOne({ userId: user._id });
 
     if (!token) {

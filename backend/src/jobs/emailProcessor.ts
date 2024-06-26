@@ -95,9 +95,7 @@ export const processEmail = async () => {
         gmail.users.messages.send({
           userId: 'me',
           requestBody: {
-            raw: Buffer.from(raw).toString('base64')
-          },
-          qs: {
+            raw: Buffer.from(raw).toString('base64'),
             threadId: message.id
           }
         });
