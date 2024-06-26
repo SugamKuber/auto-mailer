@@ -45,6 +45,7 @@ npm run preview (to run with vite build)
 - Better monitoring for email job
 - Implementation of bullMQ queues if needed for generation of openAPI mail replies
 - Proper Frontend setup 
+- Other imp features
 
 ### Reminder
 This app is only focused on backend
@@ -52,5 +53,18 @@ This app is only focused on backend
 ## Database setup
 - Use mongo cloud or any mongo database url
 - Remember to input the right username/password with network & access permissions
+
+## Links
+Backend Link: https://auto-mailer-server.up.railway.app/
+Frontend Link: http://auto-mailer.vercel.app/
+Github Link: https://github.com/SugamKuber/auto-mailer
+
+## How tos
+- Open frontend & Login with google button on home page
+- If successfull will be redirected for [check page](https://auto-mailer.vercel.app/check) here enter your email and check
+- To check if your auto mailing is active, input your email in the same page, it will show the status
+- If expired, log in again from home page 
+- If failed, check all your config & permissions 
+
 
 
