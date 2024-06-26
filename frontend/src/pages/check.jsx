@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 export default function Check() {
-    const BACKEND_URL = "http://localhost:8080";
+    const BACKEND_URL = "https://auto-mailer-server.up.railway.app";
 
     const [loading, setLoading] = useState(true);
     const [success, setSuccess] = useState(false);
