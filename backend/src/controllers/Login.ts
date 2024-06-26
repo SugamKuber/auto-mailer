@@ -27,7 +27,7 @@ class Login {
       if (email != null) {
         res.redirect(`${process.env.FONTEND_REDIRECT}/check?id=${email}`);
       } else {
-        res.redirect(`http://${process.env.FONTEND_REDIRECT}/failed`);
+        res.redirect(`${process.env.FONTEND_REDIRECT}/failed`);
       }
     }
   }
