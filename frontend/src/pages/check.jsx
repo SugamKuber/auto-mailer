@@ -50,7 +50,7 @@ export default function Check() {
     const handleSubmit = async () => {
         try {
             setLoading(true);
-            const response = await axios.get(`http://localhost:8080/auth/check?email=${email}`);
+            const response = await axios.get(`${BACKEND_URL}/auth/check?email=${email}`);
             console.log('Response:', response.data);
             setCheck(true)
             if (response.data === 'Valid') {
